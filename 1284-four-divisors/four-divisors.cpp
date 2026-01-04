@@ -15,16 +15,15 @@ int helper(int n){
         }
     }
     if(count==4) return sum;
-    return -1;
+    return 0;
 }
 
     int sumFourDivisors(vector<int>& nums) {
         int n=nums.size();
         int ans = 0;
         for(int i=0;i<n;i++){
-            int k = helper(nums[i]);
-            if(k>0) ans+=k;
-            cout<<ans<<endl;
+            ans += helper(nums[i]);
+            // cout<<ans<<endl;
         }
         return ans;
     }
