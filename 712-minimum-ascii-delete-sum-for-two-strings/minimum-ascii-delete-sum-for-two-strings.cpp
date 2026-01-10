@@ -1,6 +1,7 @@
 class Solution {
 public:
     int helper(int i, int j, string& s1, string& s2, vector<vector<int>>& dp){
+        if (i >= s1.length() && j >= s2.length()) return 0;
         if(i==s1.length()){
             int sum=0;
             for(int k=j;k<s2.length();k++) sum+=s2[k];
