@@ -4,7 +4,7 @@ public:
         vector<vector<int>> ans;
         sort(occupiedIntervals.begin(),occupiedIntervals.end()); 
 
-        for(auto it: occupiedIntervals){
+        for(auto &it: occupiedIntervals){
             if(ans.empty() || ans.back()[1]+1<it[0]){
                 ans.push_back(it);
             }
